@@ -10,6 +10,11 @@ spring:
           uri: https://github.com/CokeLee777/MSA-custom-shopping-mall-config
           username: ${GITHUB_USERNAME}
           password: ${GITHUB_PERSONAL_ACCESS_TOKEN}
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 encrypt:
   key: ${ENCRYPT_KEY}
 eureka:
@@ -24,4 +29,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info
+        include: health, info, busrefresh
